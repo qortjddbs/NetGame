@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\NetGame\\Server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|C:\\NetGame\\Server\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|solutionrelative:Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|C:\\NetGame\\Server\\InitSocket.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|solutionrelative:InitSocket.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,14 +39,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Server.cpp",
-              "DocumentMoniker": "C:\\NetGame\\Server\\Server.cpp",
-              "RelativeDocumentMoniker": "Server.cpp",
-              "ToolTip": "C:\\NetGame\\Server\\Server.cpp",
-              "RelativeToolTip": "Server.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
+              "Title": "InitSocket.cpp",
+              "DocumentMoniker": "C:\\NetGame\\Server\\InitSocket.cpp",
+              "RelativeDocumentMoniker": "InitSocket.cpp",
+              "ToolTip": "C:\\NetGame\\Server\\InitSocket.cpp",
+              "RelativeToolTip": "InitSocket.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-03T04:37:39.671Z",
+              "WhenOpened": "2026-09-08T01:03:04.572Z",
               "EditorCaption": ""
             }
           ]
