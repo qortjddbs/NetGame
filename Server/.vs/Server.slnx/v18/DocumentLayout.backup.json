@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\NetGame\\Server\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|C:\\NetGame\\Server\\ByteOrder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|solutionrelative:ByteOrder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|C:\\NetGame\\Server\\InitSocket.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|solutionrelative:InitSocket.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -39,12 +43,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ByteOrder.cpp",
+              "DocumentMoniker": "C:\\NetGame\\Server\\ByteOrder.cpp",
+              "RelativeDocumentMoniker": "ByteOrder.cpp",
+              "ToolTip": "C:\\NetGame\\Server\\ByteOrder.cpp",
+              "RelativeToolTip": "ByteOrder.cpp",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAswBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-10T04:11:07.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "InitSocket.cpp",
               "DocumentMoniker": "C:\\NetGame\\Server\\InitSocket.cpp",
               "RelativeDocumentMoniker": "InitSocket.cpp",
-              "ToolTip": "C:\\NetGame\\Server\\InitSocket.cpp*",
-              "RelativeToolTip": "InitSocket.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "ToolTip": "C:\\NetGame\\Server\\InitSocket.cpp",
+              "RelativeToolTip": "InitSocket.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-09-08T01:03:04.572Z",
               "EditorCaption": ""
