@@ -13,8 +13,8 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="소스 파일\과제">
-      <UniqueIdentifier>{8dd12bd7-fa8b-4a0f-93b4-eb4a5f59f995}</UniqueIdentifier>
+    <Filter Include="소스 파일\Chapter_4">
+      <UniqueIdentifier>{08c772f5-958d-47af-9f05-3616264e0500}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,11 +33,26 @@
     <ClCompile Include="IPAddr.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="homework1.cpp">
-      <Filter>소스 파일\과제</Filter>
+    <ClCompile Include="TCPServer.cpp">
+      <Filter>소스 파일\Chapter_4</Filter>
     </ClCompile>
-    <ClCompile Include="homework2.cpp">
-      <Filter>소스 파일\과제</Filter>
+    <ClCompile Include="TCPServer_CloseOnTransfer.cpp">
+      <Filter>소스 파일\Chapter_4</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPServer_Fixed.cpp">
+      <Filter>소스 파일\Chapter_4</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPServer_FixedVariable.cpp">
+      <Filter>소스 파일\Chapter_4</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPServer_Variable.cpp">
+      <Filter>소스 파일\Chapter_4</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPServer6.cpp">
+      <Filter>소스 파일\Chapter_4</Filter>
+    </ClCompile>
+    <ClCompile Include="homework3_server.cpp">
+      <Filter>소스 파일\Chapter_4</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
