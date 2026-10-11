@@ -16,6 +16,9 @@
     <Filter Include="소스 파일\Chapter_4">
       <UniqueIdentifier>{08c772f5-958d-47af-9f05-3616264e0500}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Chapter_6">
+      <UniqueIdentifier>{7f4dd1d6-167b-4d86-ae8c-73b25b1e8b9a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Server.cpp">
@@ -53,6 +56,24 @@
     </ClCompile>
     <ClCompile Include="homework3_server.cpp">
       <Filter>소스 파일\Chapter_4</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadTCPServer.cpp">
+      <Filter>소스 파일\Chapter_6</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadTest1.cpp">
+      <Filter>소스 파일\Chapter_6</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadTest2.cpp">
+      <Filter>소스 파일\Chapter_6</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadTest3.cpp">
+      <Filter>소스 파일\Chapter_6</Filter>
+    </ClCompile>
+    <ClCompile Include="CriticalSections.cpp">
+      <Filter>소스 파일\Chapter_6</Filter>
+    </ClCompile>
+    <ClCompile Include="Events.cpp">
+      <Filter>소스 파일\Chapter_6</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

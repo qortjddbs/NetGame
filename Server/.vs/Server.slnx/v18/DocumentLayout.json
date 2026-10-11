@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\NetGame\\Server\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|C:\\NetGame\\Server\\Events.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|solutionrelative:Events.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|C:\\NetGame\\Server\\CriticalSections.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|solutionrelative:CriticalSections.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|C:\\NetGame\\Server\\ThreadTCPServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|solutionrelative:ThreadTCPServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|C:\\NetGame\\Server\\ThreadTest3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|solutionrelative:ThreadTest3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|C:\\NetGame\\Server\\ThreadTest2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|solutionrelative:ThreadTest2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|C:\\NetGame\\Server\\ThreadTest1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|solutionrelative:ThreadTest1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|C:\\NetGame\\Server\\homework3_server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{097238B5-19FD-4D46-8AAB-416A9C2C2765}|Server.vcxproj|solutionrelative:homework3_server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -55,6 +79,81 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Events.cpp",
+              "DocumentMoniker": "C:\\NetGame\\Server\\Events.cpp",
+              "RelativeDocumentMoniker": "Events.cpp",
+              "ToolTip": "C:\\NetGame\\Server\\Events.cpp",
+              "RelativeToolTip": "Events.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-11T13:56:08.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CriticalSections.cpp",
+              "DocumentMoniker": "C:\\NetGame\\Server\\CriticalSections.cpp",
+              "RelativeDocumentMoniker": "CriticalSections.cpp",
+              "ToolTip": "C:\\NetGame\\Server\\CriticalSections.cpp",
+              "RelativeToolTip": "CriticalSections.cpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-11T13:52:21.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ThreadTCPServer.cpp",
+              "DocumentMoniker": "C:\\NetGame\\Server\\ThreadTCPServer.cpp",
+              "RelativeDocumentMoniker": "ThreadTCPServer.cpp",
+              "ToolTip": "C:\\NetGame\\Server\\ThreadTCPServer.cpp",
+              "RelativeToolTip": "ThreadTCPServer.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-11T12:41:59.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ThreadTest3.cpp",
+              "DocumentMoniker": "C:\\NetGame\\Server\\ThreadTest3.cpp",
+              "RelativeDocumentMoniker": "ThreadTest3.cpp",
+              "ToolTip": "C:\\NetGame\\Server\\ThreadTest3.cpp",
+              "RelativeToolTip": "ThreadTest3.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-11T12:34:42.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ThreadTest2.cpp",
+              "DocumentMoniker": "C:\\NetGame\\Server\\ThreadTest2.cpp",
+              "RelativeDocumentMoniker": "ThreadTest2.cpp",
+              "ToolTip": "C:\\NetGame\\Server\\ThreadTest2.cpp",
+              "RelativeToolTip": "ThreadTest2.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-11T12:20:02.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ThreadTest1.cpp",
+              "DocumentMoniker": "C:\\NetGame\\Server\\ThreadTest1.cpp",
+              "RelativeDocumentMoniker": "ThreadTest1.cpp",
+              "ToolTip": "C:\\NetGame\\Server\\ThreadTest1.cpp",
+              "RelativeToolTip": "ThreadTest1.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-11T12:13:00.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "homework3_server.cpp",
               "DocumentMoniker": "C:\\NetGame\\Server\\homework3_server.cpp",
               "RelativeDocumentMoniker": "homework3_server.cpp",
@@ -62,12 +161,11 @@
               "RelativeToolTip": "homework3_server.cpp",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-26T11:43:40.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-26T11:43:40.684Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Common.h",
               "DocumentMoniker": "C:\\NetGame\\Server\\Common.h",
               "RelativeDocumentMoniker": "Common.h",
