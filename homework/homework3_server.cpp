@@ -3,12 +3,28 @@
 #define SERVERPORT 9000
 #define BUFSIZE    4096
 
+CRITICAL_SECTION cs;
+int g_nextLine = 2;
+
 DWORD WINAPI ProcessClient(LPVOID arg)
 {
+	int retval;
+	SOCKET client_sock = (SOCKET)arg;
+	struct sockaddr_in client_addr;
+	char addr[INET_ADDRSTRLEN];
+	int addr_len;
 	int len; // 고정 길이 데이터
 	char buf[BUFSIZE + 1]; // 가변 길이 데이터
 
+	// 클라이언트 정보 얻기
+	addr_len = sizeof(client_addr);
+	getpeername(client_sock, (struct sockaddr*)&client_addr, &addr_len);
+	inet_ntop(AF_INET, &client_addr.sin_addr, addr, sizeof(addr));
+	int myLine;
 
+	EnterCriticalSection(&cs);
+	myLine = g_nextLine++;
+	LeaveCriticalSection(&cs);
 
 	// 클라이언트와 데이터 통신
 	while (1) {
@@ -44,7 +60,11 @@ DWORD WINAPI ProcessClient(LPVOID arg)
 
 		FILE* fp = fopen(buf, "wb");
 		if (fp == NULL) {
+			EnterCriticalSection(&cs);
+			COORD pos = { 0, (SHORT)myLine };
+			SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 			printf("파일 생성 실패: %s\n", buf);
+			LeaveCriticalSection(&cs);
 			break;
 		}
 
@@ -66,20 +86,27 @@ DWORD WINAPI ProcessClient(LPVOID arg)
 			fwrite(data, 1, retval, fp);		// 받은 만큼만 파일에 씀
 			received += retval;
 
-			// 수신률 표시: \r로 같은 줄을 덮어써서 스크롤 안됨
-			printf("\r[%s] 수신률: %3d%% (%d/%d바이트)", buf, (int)((long long)received * 100 / file_size), received, file_size);
+			EnterCriticalSection(&cs);
+			COORD pos = { 0, (SHORT)myLine };
+			SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+			printf("%s - [%s] 수신률: %3d%% (%d/%d바이트)", addr, buf, (int)((long long)received * 100 / file_size), received, file_size);
+			LeaveCriticalSection(&cs);
 		}
-		printf("\n");
 		fclose(fp);
 
-		if (received == file_size) printf("[TCP 서버] %s 수신 완료\n", buf);
-		else printf("[TCP 서버] %s 수신 실패 (%d/%d 바이트)\n", buf, received, file_size);
+		EnterCriticalSection(&cs);
+		COORD pos = { 0, (SHORT)myLine };
+		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+		if (received == file_size) printf("[%s] %s 수신 완료			", addr, buf);
+		else printf("[%s] %s 수신 실패 (%d/%d 바이트)			", addr, buf, received, file_size);
+		LeaveCriticalSection(&cs);
 	}
 
 	// 소켓 닫기
 	closesocket(client_sock);
-	printf("[TCP 서버] 클라이언트 종료: IP 주소=%s, 포트 번호=%d\n",
-		addr, ntohs(clientaddr.sin_port));
+	//printf("[TCP 서버] 클라이언트 종료: IP 주소=%s, 포트 번호=%d\n",
+	//	addr, ntohs(client_addr.sin_port));
+	return 0;
 }
 
 int main(int argc, char* argv[])
@@ -112,6 +139,9 @@ int main(int argc, char* argv[])
 	SOCKET client_sock;
 	struct sockaddr_in clientaddr;
 	int addrlen;
+	HANDLE hThread;
+	InitializeCriticalSection(&cs);
+	system("cls");
 
 	while (1) {
 		// accept()
@@ -122,17 +152,17 @@ int main(int argc, char* argv[])
 			break;
 		}
 
-		// 접속한 클라이언트 정보 출력
-		char addr[INET_ADDRSTRLEN];
-		inet_ntop(AF_INET, &clientaddr.sin_addr, addr, sizeof(addr));
-		printf("\n[TCP 서버] 클라이언트 접속: IP 주소=%s, 포트 번호=%d\n",
-			addr, ntohs(clientaddr.sin_port));
+		// 스레드 생성 - SOCKET은 64비트 기준 8바이트. LPVOID(포인터)랑 크기가 같아 바로 변환 가능 -> 중간 캐스팅 불필요
+		hThread = CreateThread(NULL, 0, ProcessClient, (LPVOID)client_sock, 0, NULL);
+		if (hThread == NULL) { closesocket(client_sock); }
+		else { CloseHandle(hThread); }
 	}
 
 	// 소켓 닫기
 	closesocket(listen_sock);
 
 	// 윈속 종료
+	DeleteCriticalSection(&cs);
 	WSACleanup();
 	return 0;
 }

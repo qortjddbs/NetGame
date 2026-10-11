@@ -1,6 +1,5 @@
 ﻿#include "..\Server\Common.h"
 
-char* SERVERIP = (char*)"127.0.0.1";
 #define SERVERPORT 9000
 #define BUFSIZE    4096
 
@@ -8,7 +7,13 @@ int main(int argc, char* argv[])
 {
 	int retval;
 
-	const char* file_name = argv[1];
+	if (argc < 3) {
+		printf("사용법: %s <서버 IP> <파일명>\n", argv[0]);
+		return 1;
+	}
+
+	const char* server_ip = argv[1];
+	const char* file_name = argv[2];
 
 	FILE* fp = fopen(file_name, "rb");
 	if (fp == NULL) {
@@ -33,10 +38,29 @@ int main(int argc, char* argv[])
 	struct sockaddr_in serveraddr;
 	memset(&serveraddr, 0, sizeof(serveraddr));
 	serveraddr.sin_family = AF_INET;
-	inet_pton(AF_INET, SERVERIP, &serveraddr.sin_addr);
+	if (inet_pton(AF_INET, server_ip, &serveraddr.sin_addr) != 1) {
+		printf("잘못된 IP 주소 : %s\n", server_ip);
+		fclose(fp);
+		closesocket(sock);
+		WSACleanup();
+		return 1;
+	}
 	serveraddr.sin_port = htons(SERVERPORT);
 	retval = connect(sock, (struct sockaddr*)&serveraddr, sizeof(serveraddr));
-	if (retval == SOCKET_ERROR) err_quit("connect()");
+	if (retval == SOCKET_ERROR) {
+		// 형식은 맞지만 그 주소에 서버가 없거나 닿지 않는 경우
+		int err = WSAGetLastError();
+		if (err == WSAETIMEDOUT)
+			printf("서버 %s에 연결할 수 없습니다 (시간 초과: IP 주소, 네트워크, 방화벽 확인)\n", server_ip);
+		else if (err == WSAECONNREFUSED)
+			printf("서버 %s가 연결을 거부했습니다 (서버 실행 여부, 포트 %d 확인)\n", server_ip, SERVERPORT);
+		else
+			err_display("connect()");
+		fclose(fp);
+		closesocket(sock);
+		WSACleanup();
+		return 1;
+	}
 
 	// 데이터 통신에 사용할 변수
 	char buf[BUFSIZE];
