@@ -27,5 +27,8 @@
     <ClCompile Include="homework3_server.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="homework4_설명.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

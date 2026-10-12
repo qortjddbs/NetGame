@@ -63,7 +63,7 @@ DWORD WINAPI ProcessClient(LPVOID arg)
 			EnterCriticalSection(&cs);
 			COORD pos = { 0, (SHORT)myLine };
 			SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
-			printf("파일 생성 실패: %s\n", buf);
+			printf("파일 생성 실패: %s", buf);
 			LeaveCriticalSection(&cs);
 			break;
 		}
@@ -97,15 +97,13 @@ DWORD WINAPI ProcessClient(LPVOID arg)
 		EnterCriticalSection(&cs);
 		COORD pos = { 0, (SHORT)myLine };
 		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
-		if (received == file_size) printf("[%s] %s 수신 완료			", addr, buf);
-		else printf("[%s] %s 수신 실패 (%d/%d 바이트)			", addr, buf, received, file_size);
+		if (received == file_size) printf("[%s] %s 수신 완료: %3d%% (%d/%d바이트)", addr, buf, (int)((long long)received * 100 / file_size), received, file_size);
+		else printf("[%s] %s 수신 실패 (%d/%d 바이트)                   ", addr, buf, received, file_size);
 		LeaveCriticalSection(&cs);
 	}
 
 	// 소켓 닫기
 	closesocket(client_sock);
-	//printf("[TCP 서버] 클라이언트 종료: IP 주소=%s, 포트 번호=%d\n",
-	//	addr, ntohs(client_addr.sin_port));
 	return 0;
 }
 
